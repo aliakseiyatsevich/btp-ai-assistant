@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.9.xsd">
+
+    <changeSet id="create-chat-message-dto-table" author="MarshallBaby">
+        <sql>
+            CREATE TABLE "CHAT_MESSAGE_DTO"
+            (
+                ID bigint NOT NULL primary key ,
+                PAYLOAD VARCHAR(5000) NOT NULL,
+                IS_USER_MESSAGE BOOLEAN NOT NULL
+            );
+        </sql>
+    </changeSet>
+
+</databaseChangeLog>
